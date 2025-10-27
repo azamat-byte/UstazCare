@@ -76,7 +76,7 @@ export default function ContactPage() {
     <div id="contact" className="py-20 bg-gradient-to-br from-white to-green-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
+          <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-teal-500 to-teal-600 bg-clip-text text-transparent">
             {t('contact.title')}
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -98,7 +98,7 @@ export default function ContactPage() {
                     id="name"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all outline-none"
+                    className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-teal-500 focus:ring-2 focus:ring-blue-200 transition-all outline-none"
                     required
                   />
                 </div>
@@ -111,7 +111,7 @@ export default function ContactPage() {
                     id="email"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all outline-none"
+                    className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-teal-500 focus:ring-2 focus:ring-blue-200 transition-all outline-none"
                     required
                   />
                 </div>
@@ -124,13 +124,13 @@ export default function ContactPage() {
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     rows={6}
-                    className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all outline-none resize-none"
+                    className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-teal-500 focus:ring-2 focus:ring-blue-200 transition-all outline-none resize-none"
                     required
                   />
                 </div>
                 <button
                   type="submit"
-                  className="w-full py-4 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-xl font-bold text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2"
+                  className="w-full py-4 bg-gradient-to-r from-teal-500 to-teal-600 text-white rounded-xl font-bold text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2"
                 >
                   <Send className="h-5 w-5" />
                   <span>{t('contact.form.submit')}</span>
@@ -144,15 +144,15 @@ export default function ContactPage() {
                   key={index}
                   className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center space-x-4"
                 >
-                  <div className="bg-gradient-to-br from-blue-100 to-green-100 w-14 h-14 rounded-full flex items-center justify-center flex-shrink-0">
-                    <info.icon className="h-6 w-6 text-blue-600" />
+                  <div className="bg-gradient-to-br from-teal-50 to-teal-100 w-14 h-14 rounded-full flex items-center justify-center flex-shrink-0">
+                    <info.icon className="h-6 w-6 text-teal-600" />
                   </div>
                   <div>
                     <p className="text-sm font-semibold text-gray-500">{info.label}</p>
                     {info.link ? (
                       <a
                         href={info.link}
-                        className="text-lg font-bold text-gray-900 hover:text-blue-600 transition-colors"
+                        className="text-lg font-bold text-gray-900 hover:text-teal-600 transition-colors"
                       >
                         {info.value}
                       </a>
@@ -166,13 +166,13 @@ export default function ContactPage() {
           </div>
 
           <div>
-            <div className="bg-gradient-to-br from-blue-600 to-blue-700 text-white p-10 rounded-3xl shadow-xl mb-8">
+            <div className="bg-gradient-to-br from-teal-600 to-teal-700 text-white p-10 rounded-3xl shadow-xl mb-8">
               <MessageCircle className="h-12 w-12 mb-6" />
               <h2 className="text-3xl font-bold mb-4">Need Immediate Help?</h2>
               <p className="text-blue-100 mb-6">
                 Our 24/7 anonymous chat is available for urgent support and immediate assistance.
               </p>
-              <button className="w-full py-4 bg-white text-blue-600 rounded-xl font-bold text-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
+              <button className="w-full py-4 bg-white text-teal-600 rounded-xl font-bold text-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
                 Start Anonymous Chat
               </button>
             </div>
@@ -195,7 +195,7 @@ export default function ContactPage() {
               </div>
               <div className="mt-6 p-4 bg-white rounded-xl">
                 <p className="text-sm text-gray-600">
-                  <strong className="text-blue-600">Note:</strong> Anonymous chat support is available 24/7 for urgent matters.
+                  <strong className="text-teal-600">Note:</strong> Anonymous chat support is available 24/7 for urgent matters.
                 </p>
               </div>
             </div>
@@ -204,7 +204,7 @@ export default function ContactPage() {
 
         <div className="bg-white p-10 rounded-3xl shadow-xl">
           <div className="flex items-center justify-center mb-8">
-            <HelpCircle className="h-12 w-12 text-blue-600 mr-4" />
+            <HelpCircle className="h-12 w-12 text-teal-600 mr-4" />
             <h2 className="text-4xl font-bold text-gray-900">{t('contact.faq.title')}</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

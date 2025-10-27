@@ -9,8 +9,8 @@ export default function HomePage() {
       icon: Heart,
       titleKey: 'features.counseling.title',
       descKey: 'features.counseling.desc',
-      color: 'text-blue-500',
-      bgColor: 'bg-blue-100',
+      color: 'text-teal-500',
+      bgColor: 'bg-teal-100',
     },
     {
       icon: Users,
@@ -73,7 +73,7 @@ export default function HomePage() {
 
         <div className="relative max-w-7xl mx-auto text-center z-10">
           <div className="mb-8 inline-block p-4 bg-white/80 backdrop-blur-sm rounded-full shadow-lg">
-            <Heart className="h-16 w-16 text-blue-500" />
+            <Heart className="h-16 w-16 text-teal-500" />
           </div>
           <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-600 via-blue-500 to-green-600 bg-clip-text text-transparent">
             {t('hero.title')}
@@ -87,13 +87,13 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="#experts"
-              className="px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-full font-semibold text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
+              className="px-8 py-4 bg-gradient-to-r from-teal-500 to-teal-600 text-white rounded-full font-semibold text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
             >
               {t('hero.cta.psychologist')}
             </a>
             <a
               href="#community"
-              className="px-8 py-4 bg-white text-blue-600 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 border-2 border-blue-500"
+              className="px-8 py-4 bg-white text-teal-600 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 border-2 border-teal-500"
             >
               {t('hero.cta.community')}
             </a>
@@ -121,7 +121,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-br from-blue-600 to-blue-700 text-white">
+      <section className="py-20 bg-gradient-to-br from-teal-600 to-teal-700 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
@@ -171,7 +171,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center p-8 bg-white rounded-2xl shadow-lg">
-              <TrendingUp className="h-12 w-12 text-blue-500 mx-auto mb-4" />
+              <TrendingUp className="h-12 w-12 text-teal-500 mx-auto mb-4" />
               <h3 className="text-xl font-bold mb-3 text-gray-900">Innovation</h3>
               <p className="text-gray-600">AI-powered stress assessment and personalized recommendations</p>
             </div>

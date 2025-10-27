@@ -5,7 +5,7 @@ export default function CommunityPage() {
   const { t } = useLanguage();
 
   const categories = [
-    { name: 'Stress Management', count: 156, color: 'bg-blue-500' },
+    { name: 'Stress Management', count: 156, color: 'bg-teal-500' },
     { name: 'Classroom Tips', count: 203, color: 'bg-green-500' },
     { name: 'Work-Life Balance', count: 98, color: 'bg-purple-500' },
     { name: 'Career Development', count: 142, color: 'bg-orange-500' },
@@ -62,13 +62,13 @@ export default function CommunityPage() {
     <div id="community" className="py-20 bg-gradient-to-br from-blue-50 to-green-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
+          <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-teal-500 to-teal-600 bg-clip-text text-transparent">
             {t('community.title')}
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
             {t('community.desc')}
           </p>
-          <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-full font-semibold text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
+          <button className="px-8 py-4 bg-gradient-to-r from-teal-500 to-teal-600 text-white rounded-full font-semibold text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
             {t('community.create')}
           </button>
         </div>
@@ -84,7 +84,7 @@ export default function CommunityPage() {
                 >
                   <div className="flex items-start justify-between mb-3">
                     <div className="flex-1">
-                      <h3 className="text-xl font-bold text-gray-900 mb-2 hover:text-blue-600 transition-colors">
+                      <h3 className="text-xl font-bold text-gray-900 mb-2 hover:text-teal-600 transition-colors">
                         {post.title}
                       </h3>
                       <div className="flex items-center space-x-3 text-sm text-gray-500">
@@ -95,7 +95,7 @@ export default function CommunityPage() {
                     </div>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm font-medium">
+                    <span className="px-3 py-1 bg-teal-100 text-teal-600 rounded-full text-sm font-medium">
                       {post.category}
                     </span>
                     <div className="flex items-center space-x-4 text-gray-500">
@@ -137,7 +137,7 @@ export default function CommunityPage() {
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-blue-600 to-blue-700 text-white p-6 rounded-2xl shadow-lg">
+            <div className="bg-gradient-to-br from-teal-600 to-teal-700 text-white p-6 rounded-2xl shadow-lg">
               <h3 className="text-xl font-bold mb-4">Your Progress</h3>
               <div className="space-y-4">
                 <div>
@@ -149,7 +149,7 @@ export default function CommunityPage() {
                     <div className="bg-blue-300 h-3 rounded-full" style={{ width: '65%' }}></div>
                   </div>
                 </div>
-                <div className="border-t border-blue-500 pt-4 space-y-2">
+                <div className="border-t border-teal-500 pt-4 space-y-2">
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-blue-100">Posts Created</span>
                     <span className="font-bold">12</span>
@@ -181,7 +181,7 @@ export default function CommunityPage() {
                 </div>
                 <h3 className="text-lg font-bold mb-2 text-gray-900">{achievement.label}</h3>
                 <p className="text-gray-600 text-sm mb-3">{achievement.description}</p>
-                <div className="text-blue-600 font-bold">{achievement.points} points</div>
+                <div className="text-teal-600 font-bold">{achievement.points} points</div>
               </div>
             ))}
           </div>

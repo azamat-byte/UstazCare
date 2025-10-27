@@ -16,8 +16,8 @@ export default function AboutPage() {
       icon: Users,
       title: 'Community',
       description: 'Building connections among educators',
-      color: 'text-blue-500',
-      bgColor: 'bg-blue-100',
+      color: 'text-teal-500',
+      bgColor: 'bg-teal-100',
     },
     {
       icon: Lightbulb,
@@ -60,7 +60,7 @@ export default function AboutPage() {
     <div id="about" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
+          <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-teal-500 to-teal-600 bg-clip-text text-transparent">
             {t('nav.about')}
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -71,7 +71,7 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20">
           <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-10 rounded-3xl shadow-lg">
             <div className="bg-white w-16 h-16 rounded-2xl flex items-center justify-center mb-6 shadow-md">
-              <Target className="h-8 w-8 text-blue-600" />
+              <Target className="h-8 w-8 text-teal-600" />
             </div>
             <h2 className="text-3xl font-bold mb-4 text-gray-900">{t('about.mission.title')}</h2>
             <p className="text-gray-700 text-lg leading-relaxed">{t('about.mission.desc')}</p>
@@ -116,14 +116,14 @@ export default function AboutPage() {
                   {member.image}
                 </div>
                 <h3 className="text-xl font-bold mb-2 text-gray-900">{member.name}</h3>
-                <p className="text-blue-600 font-semibold mb-3">{member.role}</p>
+                <p className="text-teal-600 font-semibold mb-3">{member.role}</p>
                 <p className="text-gray-600">{member.bio}</p>
               </div>
             ))}
           </div>
         </div>
 
-        <div className="bg-gradient-to-br from-blue-600 to-blue-700 text-white p-12 rounded-3xl shadow-xl">
+        <div className="bg-gradient-to-br from-teal-600 to-teal-700 text-white p-12 rounded-3xl shadow-xl">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-4">Research Focus</h2>
             <p className="text-xl text-blue-100 mb-6">

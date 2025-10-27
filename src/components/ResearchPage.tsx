@@ -44,7 +44,7 @@ export default function ResearchPage() {
       description: 'Early warning system to identify teachers at risk of burnout before critical stages',
       status: 'Development',
       icon: TrendingUp,
-      color: 'from-blue-500 to-blue-600',
+      color: 'from-teal-500 to-teal-600',
     },
     {
       title: 'Gamified Wellness Platform',
@@ -80,7 +80,7 @@ export default function ResearchPage() {
     <div id="research" className="py-20 bg-gradient-to-br from-white to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
+          <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-teal-500 to-teal-600 bg-clip-text text-transparent">
             {t('research.title')}
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -88,7 +88,7 @@ export default function ResearchPage() {
           </p>
         </div>
 
-        <div className="bg-gradient-to-br from-blue-600 to-blue-700 text-white p-12 rounded-3xl shadow-2xl mb-16">
+        <div className="bg-gradient-to-br from-teal-600 to-teal-700 text-white p-12 rounded-3xl shadow-2xl mb-16">
           <div className="max-w-3xl mx-auto text-center">
             <Microscope className="h-16 w-16 mx-auto mb-6" />
             <h2 className="text-3xl font-bold mb-4">Master's Research Project</h2>
@@ -120,8 +120,8 @@ export default function ResearchPage() {
                 key={index}
                 className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
               >
-                <div className="bg-gradient-to-br from-blue-100 to-green-100 w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
-                  <research.icon className="h-8 w-8 text-blue-600" />
+                <div className="bg-gradient-to-br from-teal-50 to-teal-100 w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
+                  <research.icon className="h-8 w-8 text-teal-600" />
                 </div>
                 <div className="mb-4">
                   <span className="px-3 py-1 bg-green-100 text-green-600 rounded-full text-xs font-semibold">
@@ -173,11 +173,11 @@ export default function ResearchPage() {
               {publications.map((pub, index) => (
                 <div
                   key={index}
-                  className="border-l-4 border-blue-500 pl-6 py-4 hover:bg-gray-50 transition-colors"
+                  className="border-l-4 border-teal-500 pl-6 py-4 hover:bg-gray-50 transition-colors"
                 >
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{pub.title}</h3>
                   <div className="flex flex-wrap items-center gap-4 text-sm text-gray-600">
-                    <span className="font-semibold text-blue-600">{pub.journal}</span>
+                    <span className="font-semibold text-teal-600">{pub.journal}</span>
                     <span>•</span>
                     <span>{pub.year}</span>
                     <span>•</span>
@@ -191,12 +191,12 @@ export default function ResearchPage() {
 
         <div className="bg-gradient-to-br from-green-50 to-blue-50 p-10 rounded-3xl shadow-lg">
           <div className="max-w-3xl mx-auto text-center">
-            <Lightbulb className="h-16 w-16 text-blue-600 mx-auto mb-6" />
+            <Lightbulb className="h-16 w-16 text-teal-600 mx-auto mb-6" />
             <h2 className="text-3xl font-bold mb-4 text-gray-900">Contribute to Research</h2>
             <p className="text-lg text-gray-600 mb-8">
               Join our ongoing studies and help shape the future of teacher mental health support in Kazakhstan. Your participation makes a difference.
             </p>
-            <button className="px-10 py-4 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-full font-bold text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
+            <button className="px-10 py-4 bg-gradient-to-r from-teal-500 to-teal-600 text-white rounded-full font-bold text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
               Participate in Research
             </button>
           </div>

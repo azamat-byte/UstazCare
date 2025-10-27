@@ -9,8 +9,8 @@ export default function ServicesPage() {
       icon: Heart,
       titleKey: 'services.counseling.title',
       descKey: 'services.counseling.desc',
-      color: 'text-blue-500',
-      bgColor: 'bg-blue-100',
+      color: 'text-teal-500',
+      bgColor: 'bg-teal-100',
       features: ['One-on-one sessions', 'Group therapy', 'Crisis support', 'Follow-up care'],
     },
     {
@@ -66,7 +66,7 @@ export default function ServicesPage() {
     <div id="services" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
+          <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-teal-500 to-teal-600 bg-clip-text text-transparent">
             {t('nav.services')}
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -93,7 +93,7 @@ export default function ServicesPage() {
                   </li>
                 ))}
               </ul>
-              <button className="mt-8 w-full py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-xl font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105">
+              <button className="mt-8 w-full py-3 bg-gradient-to-r from-teal-500 to-teal-600 text-white rounded-xl font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105">
                 Learn More
               </button>
             </div>
@@ -108,8 +108,8 @@ export default function ServicesPage() {
                 key={index}
                 className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 text-center"
               >
-                <div className="bg-gradient-to-br from-blue-100 to-green-100 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <service.icon className="h-8 w-8 text-blue-600" />
+                <div className="bg-gradient-to-br from-teal-50 to-teal-100 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <service.icon className="h-8 w-8 text-teal-600" />
                 </div>
                 <h3 className="text-lg font-bold mb-3 text-gray-900">{service.title}</h3>
                 <p className="text-gray-600 text-sm">{service.description}</p>
@@ -118,7 +118,7 @@ export default function ServicesPage() {
           </div>
         </div>
 
-        <div className="bg-gradient-to-br from-blue-600 to-green-600 text-white p-12 rounded-3xl shadow-2xl">
+        <div className="bg-gradient-to-br from-teal-500 to-teal-600 text-white p-12 rounded-3xl shadow-2xl">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-4">How It Works</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
@@ -144,7 +144,7 @@ export default function ServicesPage() {
                 <p className="text-blue-100">Connect with experts and community</p>
               </div>
             </div>
-            <button className="mt-10 px-10 py-4 bg-white text-blue-600 rounded-full font-bold text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
+            <button className="mt-10 px-10 py-4 bg-white text-teal-600 rounded-full font-bold text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
               Get Started Now
             </button>
           </div>

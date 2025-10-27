@@ -28,7 +28,7 @@ export default function CommercializationPage() {
       period: '/month',
       description: 'Complete support package',
       icon: Star,
-      color: 'from-blue-500 to-blue-600',
+      color: 'from-teal-500 to-teal-600',
       features: [
         'Everything in Free plan',
         '2 individual counseling sessions/month',
@@ -116,7 +116,7 @@ export default function CommercializationPage() {
     <div id="commercialization" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
+          <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-teal-500 to-teal-600 bg-clip-text text-transparent">
             {t('commercialization.title')}
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -129,11 +129,11 @@ export default function CommercializationPage() {
             <div
               key={index}
               className={`relative bg-white rounded-3xl shadow-xl overflow-hidden transition-all duration-300 ${
-                plan.popular ? 'scale-105 border-4 border-blue-500' : 'hover:scale-105'
+                plan.popular ? 'scale-105 border-4 border-teal-500' : 'hover:scale-105'
               }`}
             >
               {plan.popular && (
-                <div className="absolute top-0 right-0 bg-gradient-to-r from-blue-500 to-blue-600 text-white px-6 py-2 text-sm font-bold rounded-bl-2xl">
+                <div className="absolute top-0 right-0 bg-gradient-to-r from-teal-500 to-teal-600 text-white px-6 py-2 text-sm font-bold rounded-bl-2xl">
                   Most Popular
                 </div>
               )}
@@ -165,7 +165,7 @@ export default function CommercializationPage() {
                 <button
                   className={`w-full py-4 rounded-xl font-bold text-lg transition-all duration-300 ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-blue-500 to-blue-600 text-white hover:shadow-xl hover:scale-105'
+                      ? 'bg-gradient-to-r from-teal-500 to-teal-600 text-white hover:shadow-xl hover:scale-105'
                       : 'bg-gray-100 text-gray-800 hover:bg-gray-200'
                   }`}
                 >
@@ -186,7 +186,7 @@ export default function CommercializationPage() {
               >
                 <h3 className="text-xl font-bold mb-3 text-gray-900">{partnership.type}</h3>
                 <p className="text-gray-600 text-sm mb-4">{partnership.description}</p>
-                <div className="px-3 py-2 bg-blue-100 text-blue-600 rounded-lg text-sm font-semibold text-center">
+                <div className="px-3 py-2 bg-teal-100 text-teal-600 rounded-lg text-sm font-semibold text-center">
                   {partnership.benefit}
                 </div>
               </div>
@@ -202,8 +202,8 @@ export default function CommercializationPage() {
                 key={index}
                 className="bg-gradient-to-br from-white to-blue-50 p-8 rounded-2xl shadow-lg text-center hover:shadow-xl transition-all duration-300"
               >
-                <div className="bg-gradient-to-br from-blue-100 to-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <stream.icon className="h-8 w-8 text-blue-600" />
+                <div className="bg-gradient-to-br from-teal-50 to-teal-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <stream.icon className="h-8 w-8 text-teal-600" />
                 </div>
                 <h3 className="text-lg font-bold mb-2 text-gray-900">{stream.title}</h3>
                 <p className="text-gray-600 text-sm">{stream.description}</p>
@@ -212,7 +212,7 @@ export default function CommercializationPage() {
           </div>
         </div>
 
-        <div className="bg-gradient-to-br from-blue-600 to-blue-700 text-white p-12 rounded-3xl shadow-2xl mb-16">
+        <div className="bg-gradient-to-br from-teal-600 to-teal-700 text-white p-12 rounded-3xl shadow-2xl mb-16">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-4">Market Opportunity</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">

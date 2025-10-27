@@ -104,7 +104,7 @@ export default function ExpertsPage() {
     <div id="experts" className="py-20 bg-gradient-to-br from-blue-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
+          <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-teal-500 to-teal-600 bg-clip-text text-transparent">
             {t('experts.title')}
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -118,12 +118,12 @@ export default function ExpertsPage() {
               key={index}
               className="bg-white p-6 rounded-2xl shadow-lg text-center hover:shadow-xl transition-all duration-300"
             >
-              <div className="bg-gradient-to-br from-blue-100 to-green-100 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <type.icon className="h-8 w-8 text-blue-600" />
+              <div className="bg-gradient-to-br from-teal-50 to-teal-100 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <type.icon className="h-8 w-8 text-teal-600" />
               </div>
               <h3 className="text-lg font-bold mb-2 text-gray-900">{type.title}</h3>
               <p className="text-gray-600 text-sm mb-2">{type.description}</p>
-              <p className="text-blue-600 font-semibold text-sm">{type.duration}</p>
+              <p className="text-teal-600 font-semibold text-sm">{type.duration}</p>
             </div>
           ))}
         </div>
@@ -147,7 +147,7 @@ export default function ExpertsPage() {
                 </div>
                 <div className="text-center mb-4">
                   <h3 className="text-xl font-bold text-gray-900">{expert.name}</h3>
-                  <p className="text-blue-600 font-semibold">{expert.title}</p>
+                  <p className="text-teal-600 font-semibold">{expert.title}</p>
                   <p className="text-sm text-gray-500">{expert.experience} years experience</p>
                 </div>
 
@@ -177,7 +177,7 @@ export default function ExpertsPage() {
                     {expert.specialization.map((spec, idx) => (
                       <span
                         key={idx}
-                        className="px-2 py-1 bg-blue-100 text-blue-600 rounded-full text-xs"
+                        className="px-2 py-1 bg-teal-100 text-teal-600 rounded-full text-xs"
                       >
                         {spec}
                       </span>
@@ -194,7 +194,7 @@ export default function ExpertsPage() {
                   disabled={!expert.available}
                   className={`w-full py-3 rounded-xl font-semibold transition-all duration-300 ${
                     expert.available
-                      ? 'bg-gradient-to-r from-blue-500 to-blue-600 text-white hover:shadow-lg hover:scale-105'
+                      ? 'bg-gradient-to-r from-teal-500 to-teal-600 text-white hover:shadow-lg hover:scale-105'
                       : 'bg-gray-200 text-gray-500 cursor-not-allowed'
                   }`}
                 >
@@ -205,7 +205,7 @@ export default function ExpertsPage() {
           ))}
         </div>
 
-        <div className="mt-16 bg-gradient-to-br from-blue-600 to-blue-700 text-white p-12 rounded-3xl shadow-2xl">
+        <div className="mt-16 bg-gradient-to-br from-teal-600 to-teal-700 text-white p-12 rounded-3xl shadow-2xl">
           <div className="max-w-3xl mx-auto text-center">
             <Heart className="h-16 w-16 mx-auto mb-6" />
             <h2 className="text-3xl font-bold mb-4">All Our Psychologists Are:</h2>
