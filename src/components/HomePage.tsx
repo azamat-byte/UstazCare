@@ -42,29 +42,52 @@ export default function HomePage() {
     { value: '98%', labelKey: 'stats.satisfaction', icon: Star },
   ];
 
+  // Make testimonials dynamic based on language
   const testimonials = [
     {
-      name: 'Айгүл Қ.',
-      role: 'Бастауыш сынып мұғалімі',
-      text: 'UstazCare маған қиын кезеңде үлкен көмек болды. Психологпен сөйлесу өте пайдалы болды.',
+      name: t('testimonials.teacher1.name'),
+      role: t('testimonials.teacher1.role'),
+      text: t('testimonials.teacher1.text'),
       rating: 5,
     },
     {
-      name: 'Олег В.',
-      role: 'Математика мұғалімі',
-      text: 'Қауымдастықта басқа мұғалімдермен тәжірибе алмасу мүмкіндігі өте маңызды. Рақмет!',
+      name: t('testimonials.teacher2.name'),
+      role: t('testimonials.teacher2.role'),
+      text: t('testimonials.teacher2.text'),
       rating: 5,
     },
     {
-      name: 'Динара С.',
-      role: 'Ағылшын тілі мұғалімі',
-      text: 'Вебинарлар мен ресурстар менің кәсіби дамуыма үлкен ықпал етті.',
+      name: t('testimonials.teacher3.name'),
+      role: t('testimonials.teacher3.role'),
+      text: t('testimonials.teacher3.text'),
       rating: 5,
+    },
+  ];
+
+  const valueProps = [
+    {
+      icon: TrendingUp,
+      titleKey: 'values.innovation.title',
+      descKey: 'values.innovation.desc',
+      color: 'text-teal-500',
+    },
+    {
+      icon: Award,
+      titleKey: 'values.excellence.title',
+      descKey: 'values.excellence.desc',
+      color: 'text-green-500',
+    },
+    {
+      icon: Shield,
+      titleKey: 'values.privacy.title',
+      descKey: 'values.privacy.desc',
+      color: 'text-purple-500',
     },
   ];
 
   return (
     <div id="home">
+      {/* Hero Section - This part is already good! */}
       <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-100 via-white to-green-100 opacity-50"></div>
         <div className="absolute top-20 left-10 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob"></div>
@@ -101,6 +124,7 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Features Section - This part is already good! */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center mb-16 text-gray-900">{t('features.title')}</h2>
@@ -121,6 +145,7 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Stats Section - This part is already good! */}
       <section className="py-20 bg-gradient-to-br from-teal-600 to-teal-700 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -137,6 +162,7 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Testimonials Section - FIXED */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center mb-16 text-gray-900">{t('testimonials.title')}</h2>
@@ -167,24 +193,17 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Values Section - FIXED */}
       <section className="py-20 bg-gradient-to-br from-green-50 to-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center p-8 bg-white rounded-2xl shadow-lg">
-              <TrendingUp className="h-12 w-12 text-teal-500 mx-auto mb-4" />
-              <h3 className="text-xl font-bold mb-3 text-gray-900">Innovation</h3>
-              <p className="text-gray-600">AI-powered stress assessment and personalized recommendations</p>
-            </div>
-            <div className="text-center p-8 bg-white rounded-2xl shadow-lg">
-              <Award className="h-12 w-12 text-green-500 mx-auto mb-4" />
-              <h3 className="text-xl font-bold mb-3 text-gray-900">Excellence</h3>
-              <p className="text-gray-600">Licensed professionals and evidence-based approaches</p>
-            </div>
-            <div className="text-center p-8 bg-white rounded-2xl shadow-lg">
-              <Shield className="h-12 w-12 text-purple-500 mx-auto mb-4" />
-              <h3 className="text-xl font-bold mb-3 text-gray-900">Privacy</h3>
-              <p className="text-gray-600">Anonymous support and confidential consultations</p>
-            </div>
+            {valueProps.map((value, index) => (
+              <div key={index} className="text-center p-8 bg-white rounded-2xl shadow-lg">
+                <value.icon className={`h-12 w-12 ${value.color} mx-auto mb-4`} />
+                <h3 className="text-xl font-bold mb-3 text-gray-900">{t(value.titleKey)}</h3>
+                <p className="text-gray-600">{t(value.descKey)}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
