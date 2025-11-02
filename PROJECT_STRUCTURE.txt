@@ -1,0 +1,250 @@
+📁 PROJECT STRUCTURE
+═════════════════════════════════════════════════════════════════════════════
+
+project/
+├── 📄 README.md                          (Project overview)
+├── 📄 package.json                       (Dependencies)
+├── 📄 .env                               (Database credentials - KEEP SECRET!)
+│
+├── 📚 DOCUMENTATION
+│   ├── DATABASE_AND_NAMES_GUIDE.md       ← Complete setup guide
+│   ├── QUICK_START.md                    ← Fast reference
+│   ├── SETUP_COMPLETE.txt                ← This summary
+│   └── PROJECT_STRUCTURE.txt             ← File overview
+│
+├── 📁 src/
+│   ├── main.tsx                          (App entry point)
+│   ├── App.tsx                           (Root component)
+│   ├── index.css                         (Global styles & animations)
+│   │
+│   ├── 📁 contexts/
+│   │   └── LanguageContext.tsx           ← CHANGE WEBSITE NAME HERE!
+│   │                                       (All translations: kk, ru, en)
+│   │
+│   ├── 📁 components/
+│   │   ├── Layout.tsx                    ← Header, footer, navigation
+│   │   ├── HomePage.tsx                  ← Hero, features, testimonials
+│   │   ├── AboutPage.tsx                 ← Mission, vision, values
+│   │   ├── ServicesPage.tsx              ← Services overview
+│   │   ├── CommunityPage.tsx             ← Forum interface
+│   │   ├── ResourcesPage.tsx             ← Educational content
+│   │   ├── ExpertsPage.tsx               ← Psychologist directory
+│   │   ├── ResearchPage.tsx              ← Research & innovation
+│   │   ├── CommercializationPage.tsx     ← Pricing & partnerships
+│   │   └── ContactPage.tsx               ← Contact & FAQ
+│   │
+│   └── 📁 services/
+│       └── supabaseClient.ts             ← DATABASE FUNCTIONS
+│                                           (Import here to use database!)
+│
+├── 📁 dist/                              (Build output - deploy this)
+│   ├── index.html
+│   ├── assets/
+│   │   ├── index-*.css
+│   │   └── index-*.js
+│   └── ...
+│
+└── 📁 public/                            (Static files)
+
+═════════════════════════════════════════════════════════════════════════════
+
+KEY FILES TO EDIT
+═════════════════════════════════════════════════════════════════════════════
+
+1️⃣  src/contexts/LanguageContext.tsx
+    → Change 'UstazCare' to your platform name
+    → Update translations for all 3 languages (kk, ru, en)
+    → This is the MOST IMPORTANT file to edit
+
+2️⃣  src/components/Layout.tsx
+    → Logo text in header (line 55)
+    → Logo text in footer (line 147)
+    → Footer copyright (line 206)
+    → Footer organization name (line 207)
+
+3️⃣  src/services/supabaseClient.ts
+    → Database functions
+    → Import these to use database in your components
+    → Add new functions here as needed
+
+4️⃣  .env
+    → Database credentials (already configured)
+    → NEVER commit this to public repositories
+    → Keep these credentials SECRET
+
+═════════════════════════════════════════════════════════════════════════════
+
+DATABASE FUNCTIONS (in src/services/supabaseClient.ts)
+═════════════════════════════════════════════════════════════════════════════
+
+Authentication
+  • authFunctions.signUp()        - Create new user account
+  • authFunctions.signIn()        - Login user
+  • authFunctions.signOut()       - Logout user
+  • authFunctions.getCurrentUser()- Get logged-in user
+
+Profiles
+  • profileFunctions.getProfile()      - Get user profile
+  • profileFunctions.updateProfile()   - Update user info
+  • profileFunctions.getTeachers()     - Get all teachers
+
+Psychologists
+  • psychologistFunctions.getVerifiedPsychologists()
+  • psychologistFunctions.getPsychologistByProfileId()
+
+Bookings
+  • bookingFunctions.createBooking()         - Book appointment
+  • bookingFunctions.getTeacherBookings()    - Get user's bookings
+  • bookingFunctions.updateBookingStatus()   - Change booking status
+
+Community
+  • communityFunctions.getAllPosts()   - Get discussion posts
+  • communityFunctions.createPost()    - Create new post
+  • communityFunctions.likePost()      - Like a post
+
+Webinars
+  • webinarFunctions.getUpcomingWebinars()   - Get webinars
+  • webinarFunctions.registerForWebinar()    - Register for event
+
+Resources
+  • resourceFunctions.getResourcesByType()   - Get content
+  • resourceFunctions.getFeaturedResources() - Get featured content
+
+═════════════════════════════════════════════════════════════════════════════
+
+DATABASE TABLES (8 total)
+═════════════════════════════════════════════════════════════════════════════
+
+1. profiles              - User accounts (teachers, psychologists)
+2. psychologists        - Therapist professional information
+3. bookings             - Appointment scheduling
+4. community_posts      - Discussion forum posts
+5. post_comments        - Comments on forum posts
+6. resources            - Educational articles, guides, videos
+7. webinars             - Training sessions and events
+8. webinar_registrations - Webinar attendance tracking
+
+All tables have:
+✅ Row Level Security (RLS) enabled
+✅ User privacy policies
+✅ Performance indexes
+✅ Proper foreign keys
+
+═════════════════════════════════════════════════════════════════════════════
+
+QUICK EDIT LOCATIONS
+═════════════════════════════════════════════════════════════════════════════
+
+Change Website Name:
+  └─ src/contexts/LanguageContext.tsx
+     Search for: 'hero.title': 'UstazCare'
+     (3 instances for kk, ru, en)
+
+Change Header Logo:
+  └─ src/components/Layout.tsx
+     Line 55: UstazCare (header)
+
+Change Footer Logo:
+  └─ src/components/Layout.tsx
+     Line 147: UstazCare (footer)
+
+Change Footer Text:
+  └─ src/components/Layout.tsx
+     Line 206: Copyright text
+     Line 207: Organization name
+
+Add Features:
+  └─ src/services/supabaseClient.ts
+     Import functions into components to use database
+
+═════════════════════════════════════════════════════════════════════════════
+
+COLOR SCHEME
+═════════════════════════════════════════════════════════════════════════════
+
+Primary: Teal
+  • teal-500: #14B8A6 (Main color)
+  • teal-600: #0D9488 (Darker shade)
+  • teal-50:  #F0FDFA  (Light background)
+
+All tailwind classes use teal for:
+  • Buttons (bg-teal-500 to bg-teal-600)
+  • Text (text-teal-600)
+  • Backgrounds (bg-teal-50)
+  • Hover states (hover:text-teal-600)
+  • Borders (border-teal-500)
+
+═════════════════════════════════════════════════════════════════════════════
+
+BUILD COMMANDS
+═════════════════════════════════════════════════════════════════════════════
+
+Development:
+  npm run dev       - Start dev server (http://localhost:5173)
+
+Production:
+  npm run build     - Create optimized build in dist/
+
+Testing:
+  npm run typecheck - Check TypeScript types
+  npm run lint      - Check code quality
+
+Preview:
+  npm run preview   - Preview production build locally
+
+═════════════════════════════════════════════════════════════════════════════
+
+DEPLOYMENT CHECKLIST
+═════════════════════════════════════════════════════════════════════════════
+
+Before deploying:
+  ☐ Change website name in LanguageContext.tsx
+  ☐ Update all footer information
+  ☐ Test all pages in development
+  ☐ Run npm run build successfully
+  ☐ Verify database credentials in .env
+  ☐ Add your privacy policy and terms
+  ☐ Set up SSL certificate
+
+To deploy:
+  1. Run: npm run build
+  2. Upload dist/ folder to hosting
+  3. Set up environment variables on host
+  4. Test all features on live site
+
+═════════════════════════════════════════════════════════════════════════════
+
+NEXT FEATURES TO BUILD
+═════════════════════════════════════════════════════════════════════════════
+
+Essential:
+  • Login/signup pages with authentication
+  • User dashboard
+  • Psychologist search and filtering
+  • Booking system UI
+  • Payment integration
+
+Nice to have:
+  • Admin panel for managing content
+  • Email notifications
+  • Push notifications
+  • Mobile app
+  • Video call integration
+  • Advanced analytics
+
+═════════════════════════════════════════════════════════════════════════════
+
+SUPPORT
+═════════════════════════════════════════════════════════════════════════════
+
+Documentation:
+  • DATABASE_AND_NAMES_GUIDE.md - Detailed setup
+  • QUICK_START.md - Code examples
+  • SETUP_COMPLETE.txt - Summary
+
+Resources:
+  • Supabase Docs: https://supabase.com/docs
+  • React Docs: https://react.dev
+  • Tailwind CSS: https://tailwindcss.com
+
+═════════════════════════════════════════════════════════════════════════════
